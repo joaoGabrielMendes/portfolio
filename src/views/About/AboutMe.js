@@ -59,7 +59,7 @@ const AboutMe = () => {
           <Avatar
             size="3xl"
             name="Joao Gabriel Mendes"
-            src="https://i.ibb.co/SR737vy/template-0.png"
+            src="https://avatars.githubusercontent.com/u/121967325?s=400&u=20ab605bd46a5fb0c85ae15064c847ccd19a7472&v=4"
           />{" "}
         </GridItem>
       </Grid>
