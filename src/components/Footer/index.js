@@ -9,8 +9,8 @@ const Footer = ({ iconSize = 7 }) => {
     <HStack
       spacing="20px"
       height="70px"
-      position="absolute"
-      zIndex={1}
+      position="fixed"
+      zIndex={999}
       padding="20px"
       justifyContent="flex-end"
       bottom="0"

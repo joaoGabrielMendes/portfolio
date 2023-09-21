@@ -29,7 +29,6 @@ const styles = {
   global: {
     body: {
       backgroundColor: "black",
-      overflow: "hidden",
     },
   },
 };

@@ -24,8 +24,8 @@ const Header = () => {
       right="1"
     >
       <Linker alt="inicio" to="/" />
-      <Linker alt="Projetos" to="projects" />
-      <Linker alt="Sobre min" to="about" />
+      <Linker alt="Projetos" to="/projects" />
+      <Linker alt="Sobre min" to="/about" />
     </HStack>
   );
 };
