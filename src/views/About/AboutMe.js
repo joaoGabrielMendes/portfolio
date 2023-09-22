@@ -22,7 +22,7 @@ const AboutMe = () => {
         <GridItem>
           <Grid gap={4} padding="40px">
             <Heading size="2xl" fontWeight="semibold">
-              Sobre Min
+              Sobre Mim
             </Heading>
             <Text>
               Olá, sou João Gabriel, estudante de Engenharia de Software na
