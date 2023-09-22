@@ -20,6 +20,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import StartScenes from "../../components/ThreeScene/StarsScene";
 import { BsWindowSidebar } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   const [repos, setRepos] = useState([]);
@@ -35,6 +36,8 @@ const Projects = () => {
       });
   }, [username]);
 
+  console.log(repos);
+
   return (
     <Box>
       <StartScenes />
@@ -43,38 +46,40 @@ const Projects = () => {
 
       <Section>
         <Box>
-          <Heading>Works</Heading>
+          <Heading>Projetos</Heading>
         </Box>
         <Wrap spacing="36px" justify="center" width="100%">
           {repos.map((repo) => (
-            <WrapItem key={repo.id}>
-              <Card bg="transparent">
-                <CardBody
-                  paddingX="0"
-                  paddingTop="0"
-                  aspectRatio="4/3"
-                  width="300px"
-                  borderTopRadius="md"
-                >
-                  <Center
+            <Link to={repo.html_url} key={repo.id}>
+              <WrapItem>
+                <Card bg="transparent">
+                  <CardBody
+                    paddingX="0"
+                    paddingTop="0"
+                    aspectRatio="4/3"
+                    width="300px"
                     borderTopRadius="md"
-                    src={`https://raw.githubusercontent.com/${username}/${repo.name}/main/assets/thumb.png`}
-                    height="100%"
-                    bgImage={`url(https://raw.githubusercontent.com/${username}/${repo.name}/main/assets/thumb.png)`}
-                    bgSize="cover"
-                    bgPosition="left"
-                  />
-
-                  <Wrap justify="start" padding="6px">
-                    <Avatar
-                      src="https://avatars.githubusercontent.com/u/121967325?s=400&u=20ab605bd46a5fb0c85ae15064c847ccd19a7472&v=4"
-                      size="xs"
+                  >
+                    <Center
+                      borderTopRadius="md"
+                      src={`https://raw.githubusercontent.com/${username}/${repo.name}/main/assets/thumb.png`}
+                      height="100%"
+                      bgImage={`url(https://raw.githubusercontent.com/${username}/${repo.name}/main/assets/thumb.png)`}
+                      bgSize="cover"
+                      bgPosition="left"
                     />
-                    {repo.name}
-                  </Wrap>
-                </CardBody>
-              </Card>
-            </WrapItem>
+
+                    <Wrap justify="start" padding="6px">
+                      <Avatar
+                        src="https://avatars.githubusercontent.com/u/121967325?s=400&u=20ab605bd46a5fb0c85ae15064c847ccd19a7472&v=4"
+                        size="xs"
+                      />
+                      {repo.name}
+                    </Wrap>
+                  </CardBody>
+                </Card>
+              </WrapItem>
+            </Link>
           ))}
         </Wrap>
       </Section>

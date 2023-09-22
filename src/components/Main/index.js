@@ -15,6 +15,7 @@ import { Canvas } from "@react-three/fiber";
 import { Float, Stars } from "@react-three/drei";
 
 import { EffectComposer, Bloom } from "@react-three/postprocessing";
+import { Link } from "react-router-dom";
 
 const windowWidth = window.innerWidth;
 const luminanceThreshold = windowWidth < 1000 ? 3 : 1;
@@ -62,9 +63,11 @@ const Main = () => {
             programação web criar experiências digitais excepcionais.
           </Text>
 
-          <Button colorScheme="white" variant="outline" size="lg">
-            Get Started
-          </Button>
+          <Link to="https://github.com/joaoGabrielMendes">
+            <Button colorScheme="white" variant="outline" size="lg">
+              Get Started
+            </Button>
+          </Link>
         </Grid>
       </GridItem>
 
