@@ -13,9 +13,9 @@ import {
 import { Model } from "../ThreeScene/React_logo";
 import { Canvas } from "@react-three/fiber";
 import { Float, Stars } from "@react-three/drei";
-
 import { EffectComposer, Bloom } from "@react-three/postprocessing";
 import { Link } from "react-router-dom";
+import TypingAnimation from "../Animations/TypingAnimation";
 
 const windowWidth = window.innerWidth;
 const luminanceThreshold = windowWidth < 1000 ? 3 : 1;
@@ -44,16 +44,8 @@ const Main = () => {
           </Heading>
 
           <Box>
-            <Heading
-              color="text.contrast"
-              size="3xl"
-              fontWeight="semibold"
-              textAlign="left"
-            >
-              Joao Gabriel
-            </Heading>
-            <Heading color="text.contrast" size="3xl" fontWeight="semibold">
-              Mendes
+            <Heading size="3xl" fontWeight="bold">
+              <TypingAnimation text="Joao Gabriel Mendes" />
             </Heading>
           </Box>
 

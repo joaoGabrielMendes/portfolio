@@ -9,12 +9,11 @@ import {
 } from "@chakra-ui/react";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-import Section from "../../components/Section";
-import AboutMe from "./AboutMe";
+import AboutMe from "../../components/AboutMe";
+import Skills from "../../components/Skills";
+import StarsScene from "../../components/ThreeScene/StarsScene";
 
 import { Link, Element } from "react-scroll";
-import StarsScene from "../../components/ThreeScene/StarsScene";
-import Skills from "./Skills";
 
 const Sec = ({ title }) => {
   const loremIpsum =

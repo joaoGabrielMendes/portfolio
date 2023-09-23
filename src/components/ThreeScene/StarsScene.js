@@ -1,9 +1,11 @@
-import { Canvas } from "react-three-fiber";
-import { Bloom, EffectComposer } from "@react-three/postprocessing";
-import { Float, Stars } from "@react-three/drei";
-import { Model } from "./React_logo";
+import React, { useRef } from "react";
+import { Canvas, useFrame } from "react-three-fiber";
+import { Stars } from "@react-three/drei";
+import { EffectComposer, Bloom } from "@react-three/postprocessing";
 
 const StarsScene = () => {
+  const cameraRef = useRef();
+
   return (
     <Canvas
       style={{
@@ -12,10 +14,36 @@ const StarsScene = () => {
         position: "fixed",
         zIndex: "-1",
       }}
-      camera={{ position: [0, 0, 20] }}
+      camera={{ position: [0, 0, 20], ref: cameraRef }}
     >
-      <Stars saturation={0} count={500} speed={0.9} />
+      <StarsComponent />
+      <EffectComposer>
+        <Bloom luminanceThreshold={0.7} luminanceSmoothing={0.9} />
+      </EffectComposer>
     </Canvas>
+  );
+};
+
+const StarsComponent = () => {
+  const starsRef = useRef();
+
+  useFrame(({ clock }) => {
+    if (starsRef.current) {
+      starsRef.current.position.z = -Math.sin(clock.elapsedTime * 0.2) * 50;
+    }
+  });
+
+  return (
+    <Stars
+      ref={starsRef}
+      saturation={0}
+      count={1000}
+      radius={100}
+      depth={50}
+      factor={4}
+      fade={true}
+      materialType="PointsMaterial"
+    />
   );
 };
 
