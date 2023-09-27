@@ -1,8 +1,7 @@
 import * as THREE from 'three'
 import { useMemo, useRef } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
-import { Trail, Float, Line, Sphere, Stars } from '@react-three/drei'
-import { EffectComposer, Bloom } from '@react-three/postprocessing'
+import { useFrame } from '@react-three/fiber'
+import { Line, Sphere } from '@react-three/drei'
 
 function Model(props) {
   const points = useMemo(() => new THREE.EllipseCurve(0, 0, 3, 1.15, 0, 2 * Math.PI, false, 0).getPoints(100), [])

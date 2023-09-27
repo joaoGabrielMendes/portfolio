@@ -1,4 +1,4 @@
-import { Box, HStack, Heading, Icon, Image } from "@chakra-ui/react";
+import { HStack, Icon } from "@chakra-ui/react";
 import { IconContext } from "react-icons";
 import { BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";

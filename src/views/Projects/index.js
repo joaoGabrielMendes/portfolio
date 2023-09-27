@@ -15,7 +15,6 @@ import Section from "../../components/Section";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import StartScenes from "../../components/ThreeScene/StarsScene";
-import { BsWindowSidebar } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 const Projects = () => {

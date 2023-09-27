@@ -1,14 +1,4 @@
-import {
-  Avatar,
-  Box,
-  Button,
-  Center,
-  Grid,
-  GridItem,
-  Heading,
-  Image,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Button, Grid, GridItem, Heading, Text } from "@chakra-ui/react";
 
 import { Model } from "../ThreeScene/React_logo";
 import { Canvas } from "@react-three/fiber";

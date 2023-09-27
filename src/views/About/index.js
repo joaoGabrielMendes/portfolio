@@ -4,33 +4,14 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
   Grid,
-  Heading,
-  Text,
 } from "@chakra-ui/react";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-import AboutMe from "../../components/AboutMe";
 import Skills from "../../components/Skills";
+import AboutMe from "../../components/AboutMe";
 import StarsScene from "../../components/ThreeScene/StarsScene";
 
 import { Link, Element } from "react-scroll";
-
-const Sec = ({ title }) => {
-  const loremIpsum =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend turpis in arcu bibendum, eu ultrices quam lacinia. Phasellus fringilla massa nec justo hendrerit, sed venenatis dolor dictum. Vivamus ultrices urna vel metus congue facilisis. Integer quis venenatis turpis. Vivamus ut purus vel nisi tristique rhoncus. Sed sed semper purus. Integer vitae mi et sem volutpat luctus eu at nunc. Phasellus vitae nisl vitae est auctor vestibulum. Praesent euismod, sem vel venenatis malesuada, nisl turpis viverra tellus, in feugiat ex velit in quam. Integer ac bibendum massa, a finibus elit.";
-
-  const content = [];
-  for (let i = 0; i < 7; i++) {
-    content.push(loremIpsum);
-  }
-
-  return (
-    <Box padding="100px">
-      <Heading>{title}</Heading>
-      <Text>{content}</Text>
-    </Box>
-  );
-};
 
 const About = () => {
   return (
