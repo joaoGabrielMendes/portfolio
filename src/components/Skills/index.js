@@ -17,7 +17,7 @@ import {
 import { TbBrandNextjs } from "react-icons/tb";
 import { IconContext } from "react-icons";
 
-const CustomIcon = ({ as, size = "100px" }) => {
+const CustomIcon = ({ as, size = "50px" }) => {
   return <Icon as={as} boxSize={size} />;
 };
 
@@ -28,8 +28,12 @@ const Skills = () => {
         <Heading size="2xl" fontWeight="semibold">
           Skills
         </Heading>
-        <HStack spacing="5em" wrap="wrap">
-          <IconContext.Provider value={{ color: "white", size: "2em" }}>
+        <HStack
+          spacing="5em"
+          wrap="wrap"
+          justify={{ base: "center", lg: "start" }}
+        >
+          <IconContext.Provider value={{ color: "white" }}>
             <CustomIcon as={BiLogoHtml5} />
             <CustomIcon as={BiLogoCss3} />
             <CustomIcon as={BiLogoJavascript} />

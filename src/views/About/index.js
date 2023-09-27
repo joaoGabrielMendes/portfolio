@@ -17,9 +17,13 @@ const About = () => {
   return (
     <Box>
       <Header />
-      <Grid position="fixed"></Grid>
 
-      <Breadcrumb position="fixed" top="5" left="calc(10% - 40px)">
+      <Breadcrumb
+        position="fixed"
+        top="5"
+        left="calc(10% - 40px)"
+        display="none"
+      >
         <BreadcrumbItem>
           <BreadcrumbLink>
             <Link to="introducao" smooth={true} duration={500}>

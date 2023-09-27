@@ -17,10 +17,14 @@ import { SiMyanimelist } from "react-icons/si";
 
 const AboutMe = () => {
   return (
-    <Section>
-      <Grid templateColumns="1fr 1fr" placeItems="center" gap="1=8">
+    <Section height="calc(100vh - 60px)">
+      <Grid
+        templateColumns={{ base: "1fr", lg: "1fr 1fr" }}
+        placeItems="center"
+        height="100%"
+      >
         <GridItem>
-          <Grid gap={4} padding="40px">
+          <Grid gap={4} padding={{ base: "0px", lg: "40px" }}>
             <Heading size="2xl" fontWeight="semibold">
               Sobre Mim
             </Heading>
@@ -57,7 +61,7 @@ const AboutMe = () => {
 
         <GridItem>
           <Avatar
-            size="3xl"
+            size={{ base: "2xl", lg: "3xl" }}
             name="Joao Gabriel Mendes"
             src="https://avatars.githubusercontent.com/u/121967325?s=400&u=20ab605bd46a5fb0c85ae15064c847ccd19a7472&v=4"
           />{" "}
