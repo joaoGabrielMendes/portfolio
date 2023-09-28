@@ -20,7 +20,7 @@ const Footer = ({ iconSize = 7 }) => {
         <Link to="https://github.com/joaoGabrielMendes">
           <Icon as={BsGithub} boxSize={iconSize} />
         </Link>
-        <Link to="linkedin.com/in/joão-gabriel-mendes/">
+        <Link to="https://www.linkedin.com/in/jo%C3%A3o-gabriel-mendes/+">
           <Icon as={BsLinkedin} boxSize={iconSize} />
         </Link>
         <Link to="https://www.instagram.com/">
